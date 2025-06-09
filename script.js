@@ -1,34 +1,26 @@
-const caixaPrincipal = document.querySelector(".caixa-principal");
-const caixaPerguntas = document.querySelector(".caixa-perguntas");
-const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const textoResultado = document.querySelector(".texto-resultado");
-const perguntas = [
-    {
-        enunciado: "Pergunta 1",
-        alternativas: ["Alternativa1","Alternativa2"]
-    },
-    {
-        enunciado: "Pergunta 2",
-        alternativas: ["Alternativa1","Alternativa2"]
-    }
-];
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Você decide o futuro da IA</title>
+</head>
+<body>
+    <div class="caixa-principal">
+        <h1>Você decide o futuro do IA</h1>
+        <div class="caixa-perguntas">
+            Você já sabe quais são as perguntas que irão nortear sua missão ?
+        </div>
+        <div class="caixa-alternativas">
 
-let atual = 0;
-let perguntaAtual;
-
-function mostraPergunta(){
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    mostraAlternativa();
-}
-
-function mostraAlternativa(){
-    for(const alternativas of perguntaAtual.alternativas) {
-        const botaoAlternativo = document.createElement("button");
-        botaoAlternativa.textContent = alternativas.texto
-        caixaAlternativas.appendChild(botaoAlternativo);
-    }
-}
-
-mostraPergunta();
+        </div>
+        <div class="caixa-resultado">
+            <p class="texto-resultado">
+                E o seu texto final, já está pronto ?
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
